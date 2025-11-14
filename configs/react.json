@@ -1,0 +1,84 @@
+{
+  "name": "React",
+  "base_url": "https://react.dev",
+  "docs_base": "https://react.dev/reference/react",
+  "version": "18",
+  "description": "React library documentation",
+  "sections": [
+    {
+      "category": "React Reference",
+      "pages": [
+        {"title": "Overview", "url": "/reference/react"},
+        {"title": "Hooks", "url": "/reference/react/hooks"},
+        {"title": "Components", "url": "/reference/react/components"},
+        {"title": "APIs", "url": "/reference/react/apis"}
+      ]
+    },
+    {
+      "category": "Hooks",
+      "pages": [
+        {"title": "useState", "url": "/reference/react/useState"},
+        {"title": "useEffect", "url": "/reference/react/useEffect"},
+        {"title": "useContext", "url": "/reference/react/useContext"},
+        {"title": "useReducer", "url": "/reference/react/useReducer"},
+        {"title": "useCallback", "url": "/reference/react/useCallback"},
+        {"title": "useMemo", "url": "/reference/react/useMemo"},
+        {"title": "useRef", "url": "/reference/react/useRef"},
+        {"title": "useImperativeHandle", "url": "/reference/react/useImperativeHandle"},
+        {"title": "useLayoutEffect", "url": "/reference/react/useLayoutEffect"},
+        {"title": "useDebugValue", "url": "/reference/react/useDebugValue"},
+        {"title": "useDeferredValue", "url": "/reference/react/useDeferredValue"},
+        {"title": "useTransition", "url": "/reference/react/useTransition"},
+        {"title": "useId", "url": "/reference/react/useId"},
+        {"title": "useSyncExternalStore", "url": "/reference/react/useSyncExternalStore"},
+        {"title": "useInsertionEffect", "url": "/reference/react/useInsertionEffect"}
+      ]
+    },
+    {
+      "category": "Components",
+      "pages": [
+        {"title": "Fragment", "url": "/reference/react/Fragment"},
+        {"title": "Profiler", "url": "/reference/react/Profiler"},
+        {"title": "StrictMode", "url": "/reference/react/StrictMode"},
+        {"title": "Suspense", "url": "/reference/react/Suspense"}
+      ]
+    },
+    {
+      "category": "APIs",
+      "pages": [
+        {"title": "createContext", "url": "/reference/react/createContext"},
+        {"title": "forwardRef", "url": "/reference/react/forwardRef"},
+        {"title": "lazy", "url": "/reference/react/lazy"},
+        {"title": "memo", "url": "/reference/react/memo"},
+        {"title": "startTransition", "url": "/reference/react/startTransition"}
+      ]
+    },
+    {
+      "category": "React DOM",
+      "pages": [
+        {"title": "createRoot", "url": "/reference/react-dom/client/createRoot"},
+        {"title": "hydrateRoot", "url": "/reference/react-dom/client/hydrateRoot"},
+        {"title": "renderToString", "url": "/reference/react-dom/server/renderToString"},
+        {"title": "renderToStaticMarkup", "url": "/reference/react-dom/server/renderToStaticMarkup"}
+      ]
+    }
+  ],
+  "scraping": {
+    "rate_limit_ms": 1000,
+    "max_retries": 3,
+    "timeout_ms": 30000,
+    "user_agent": "Mozilla/5.0 (compatible; DocsScraper/1.0)",
+    "selectors": {
+      "main_content": "main, article, .prose",
+      "code_blocks": "pre code, .code-block",
+      "headings": "h1, h2, h3, h4, h5, h6",
+      "examples": ".example, .demo"
+    }
+  },
+  "output": {
+    "format": "markdown",
+    "include_metadata": true,
+    "preserve_code_blocks": true,
+    "create_index": true
+  }
+}

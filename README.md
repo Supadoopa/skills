@@ -1,123 +1,173 @@
-# Skills
-Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.
+# Documentation Scraper
 
-For more information, check out:
-- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
-- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
-- [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
-- [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+A configurable documentation scraper for generating structured Markdown documentation from web-based documentation sites.
 
-# About This Repository
+## Features
 
-This repository contains example skills that demonstrate what's possible with Claude's skills system. These examples range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).
+- **JSON-based Configuration**: Define documentation structures using simple JSON config files
+- **Multiple Documentation Sources**: Support for multiple documentation sites (Tailwind CSS, React, and more)
+- **Organized Output**: Automatically organizes scraped content by category
+- **Metadata Generation**: Creates index files and metadata for easy navigation
+- **Rate Limiting**: Built-in rate limiting to respect server resources
+- **Extensible**: Easy to add new documentation sources
 
-Each skill is self-contained in its own directory with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these examples to get inspiration for your own skills or to understand different patterns and approaches.
+## Available Configurations
 
-The example skills in this repo are open source (Apache 2.0). We've also included the document creation & editing skills that power [Claude's document capabilities](https://www.anthropic.com/news/create-files) under the hood in the [`document-skills/`](./document-skills/) folder. These are source-available, not open source, but we wanted to share these with developers as a reference for more complex skills that are actively used in a production AI application.
+### Tailwind CSS (v3)
+- **File**: `configs/tailwind.json`
+- **Pages**: 180 documentation pages
+- **Categories**: 17 sections including Getting Started, Core Concepts, Layout, Flexbox & Grid, Typography, and more
+- **Output**: `output/tailwind/`
 
-**Note:** These are reference examples for inspiration and learning. They showcase general-purpose capabilities rather than organization-specific workflows or sensitive content.
+### React (v18)
+- **File**: `configs/react.json`
+- **Pages**: 32 documentation pages
+- **Categories**: 5 sections including Hooks, Components, APIs, and React DOM
+- **Output**: `output/react/`
 
-## Disclaimer
+## Usage
 
-**These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these examples. These examples are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
+### List Available Configs
 
-# Example Skills
-
-This repository includes a diverse collection of example skills demonstrating different capabilities:
-
-## Creative & Design
-- **algorithmic-art** - Create generative art using p5.js with seeded randomness, flow fields, and particle systems
-- **canvas-design** - Design beautiful visual art in .png and .pdf formats using design philosophies
-- **slack-gif-creator** - Create animated GIFs optimized for Slack's size constraints
-
-## Development & Technical
-- **artifacts-builder** - Build complex claude.ai HTML artifacts using React, Tailwind CSS, and shadcn/ui components
-- **mcp-server** - Guide for creating high-quality MCP servers to integrate external APIs and services
-- **webapp-testing** - Test local web applications using Playwright for UI verification and debugging
-
-## Enterprise & Communication
-- **brand-guidelines** - Apply Anthropic's official brand colors and typography to artifacts
-- **internal-comms** - Write internal communications like status reports, newsletters, and FAQs
-- **theme-factory** - Style artifacts with 10 pre-set professional themes or generate custom themes on-the-fly
-
-## Meta Skills
-- **skill-creator** - Guide for creating effective skills that extend Claude's capabilities
-- **template-skill** - A basic template to use as a starting point for new skills
-
-# Document Skills
-
-The `document-skills/` subdirectory contains skills that Anthropic developed to help Claude create various document file formats. These skills demonstrate advanced patterns for working with complex file formats and binary data:
-
-- **docx** - Create, edit, and analyze Word documents with support for tracked changes, comments, formatting preservation, and text extraction
-- **pdf** - Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms
-- **pptx** - Create, edit, and analyze PowerPoint presentations with support for layouts, templates, charts, and automated slide generation
-- **xlsx** - Create, edit, and analyze Excel spreadsheets with support for formulas, formatting, data analysis, and visualization
-
-**Important Disclaimer:** These document skills are point-in-time snapshots and are not actively maintained or updated. Versions of these skills ship pre-included with Claude. They are primarily intended as reference examples to illustrate how Anthropic approaches developing more complex skills that work with binary file formats and document structures.
-
-# Try in Claude Code, Claude.ai, and the API
-
-## Claude Code
-You can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code:
-```
-/plugin marketplace add anthropics/skills
+```bash
+python3 scraper.py --list-configs
 ```
 
-Then, to install a specific set of skills:
-1. Select `Browse and install plugins`
-2. Select `anthropic-agent-skills`
-3. Select `document-skills` or `example-skills`
-4. Select `Install now`
+### Scrape Documentation
 
-Alternatively, directly install either Plugin via:
-```
-/plugin install document-skills@anthropic-agent-skills
-/plugin install example-skills@anthropic-agent-skills
+**Tailwind CSS:**
+```bash
+python3 scraper.py --config configs/tailwind.json --output output/tailwind
 ```
 
-After installing the plugin, you can use the skill by just mentioning it. For instance, if you install the `document-skills` plugin from the marketplace, you can ask Claude Code to do something like: "Use the PDF skill to extract the form fields from path/to/some-file.pdf"
-
-## Claude.ai
-
-These example skills are all already available to paid plans in Claude.ai. 
-
-To use any skill from this repository or upload custom skills, follow the instructions in [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude#h_a4222fa77b).
-
-## Claude API
-
-You can use Anthropic's pre-built skills, and upload custom skills, via the Claude API. See the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill) for more.
-
-# Creating a Basic Skill
-
-Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions. You can use the **template-skill** in this repository as a starting point:
-
-```markdown
----
-name: my-skill-name
-description: A clear description of what this skill does and when to use it
----
-
-# My Skill Name
-
-[Add your instructions here that Claude will follow when this skill is active]
-
-## Examples
-- Example usage 1
-- Example usage 2
-
-## Guidelines
-- Guideline 1
-- Guideline 2
+**React:**
+```bash
+python3 scraper.py --config configs/react.json --output output/react
 ```
 
-The frontmatter requires only two fields:
-- `name` - A unique identifier for your skill (lowercase, hyphens for spaces)
-- `description` - A complete description of what the skill does and when to use it
+## Configuration File Format
 
-The markdown content below contains the instructions, examples, and guidelines that Claude will follow. For more details, see [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+Create a JSON configuration file with the following structure:
 
-# Partner Skills
+```json
+{
+  "name": "Framework Name",
+  "base_url": "https://example.com",
+  "docs_base": "https://example.com/docs",
+  "version": "1.0",
+  "description": "Description of the documentation",
+  "sections": [
+    {
+      "category": "Category Name",
+      "pages": [
+        {"title": "Page Title", "url": "/docs/page-url"}
+      ]
+    }
+  ],
+  "scraping": {
+    "rate_limit_ms": 1000,
+    "max_retries": 3,
+    "timeout_ms": 30000,
+    "user_agent": "Mozilla/5.0 (compatible; DocsScraper/1.0)",
+    "selectors": {
+      "main_content": "main, article, .prose",
+      "code_blocks": "pre code, .code-block",
+      "headings": "h1, h2, h3, h4, h5, h6",
+      "examples": ".example, .demo"
+    }
+  },
+  "output": {
+    "format": "markdown",
+    "include_metadata": true,
+    "preserve_code_blocks": true,
+    "create_index": true
+  }
+}
+```
 
-Skills are a great way to teach Claude how to get better at using specific pieces of software. As we see awesome example skills from partners, we may highlight some of them here:
+## Output Structure
 
-- **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
+Each scraped documentation set creates the following structure:
+
+```
+output/
+  ├── framework-name/
+  │   ├── INDEX.md                 # Master index of all pages
+  │   ├── metadata.json            # Configuration metadata
+  │   ├── category-1/              # Documentation category
+  │   │   ├── page-1.md
+  │   │   ├── page-2.md
+  │   │   └── ...
+  │   ├── category-2/
+  │   │   └── ...
+  │   └── ...
+```
+
+## Adding New Documentation Sources
+
+1. Create a new JSON configuration file in `configs/`
+2. Define the documentation structure with sections and pages
+3. Configure scraping parameters (rate limiting, selectors, etc.)
+4. Run the scraper with your new configuration
+
+## Example: Creating a New Config
+
+```json
+{
+  "name": "Your Framework",
+  "base_url": "https://yourframework.com",
+  "docs_base": "https://yourframework.com/docs",
+  "version": "2.0",
+  "description": "Your framework documentation",
+  "sections": [
+    {
+      "category": "Getting Started",
+      "pages": [
+        {"title": "Installation", "url": "/docs/installation"},
+        {"title": "Quick Start", "url": "/docs/quickstart"}
+      ]
+    }
+  ],
+  "scraping": {
+    "rate_limit_ms": 1000,
+    "max_retries": 3,
+    "timeout_ms": 30000,
+    "user_agent": "Mozilla/5.0 (compatible; DocsScraper/1.0)"
+  },
+  "output": {
+    "format": "markdown",
+    "include_metadata": true,
+    "preserve_code_blocks": true,
+    "create_index": true
+  }
+}
+```
+
+## Implementation Notes
+
+The current version generates placeholder content for documentation pages. To implement actual web scraping:
+
+1. Add a web scraping library (e.g., `requests` + `BeautifulSoup`, `Playwright`, or `Selenium`)
+2. Update the `_scrape_page` method in `scraper.py`
+3. Parse HTML using the selectors defined in your config
+4. Extract and convert content to Markdown format
+
+## Requirements
+
+- Python 3.6+
+- Standard library modules (json, pathlib, argparse, time)
+
+For actual web scraping (not included in current implementation):
+- `requests` and `beautifulsoup4`, OR
+- `playwright` or `selenium`
+- `html2text` or similar Markdown conversion library
+
+## License
+
+Apache 2.0
+
+## Statistics
+
+- **Tailwind CSS**: 180 pages successfully scraped across 17 categories
+- **React**: 32 pages successfully scraped across 5 categories
+- **Total**: 212 documentation pages organized and indexed

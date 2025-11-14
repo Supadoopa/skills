@@ -1,0 +1,292 @@
+{
+  "name": "Tailwind CSS",
+  "base_url": "https://tailwindcss.com",
+  "docs_base": "https://tailwindcss.com/docs",
+  "version": "v3",
+  "description": "Tailwind CSS utility-first framework documentation",
+  "sections": [
+    {
+      "category": "Getting Started",
+      "pages": [
+        {"title": "Installation", "url": "/docs/installation"},
+        {"title": "Editor Setup", "url": "/docs/editor-setup"},
+        {"title": "Using with Preprocessors", "url": "/docs/using-with-preprocessors"},
+        {"title": "Optimizing for Production", "url": "/docs/optimizing-for-production"},
+        {"title": "Browser Support", "url": "/docs/browser-support"},
+        {"title": "Upgrade Guide", "url": "/docs/upgrade-guide"}
+      ]
+    },
+    {
+      "category": "Core Concepts",
+      "pages": [
+        {"title": "Utility-First Fundamentals", "url": "/docs/utility-first"},
+        {"title": "Hover, Focus, and Other States", "url": "/docs/hover-focus-and-other-states"},
+        {"title": "Responsive Design", "url": "/docs/responsive-design"},
+        {"title": "Dark Mode", "url": "/docs/dark-mode"},
+        {"title": "Reusing Styles", "url": "/docs/reusing-styles"},
+        {"title": "Adding Custom Styles", "url": "/docs/adding-custom-styles"},
+        {"title": "Functions & Directives", "url": "/docs/functions-and-directives"}
+      ]
+    },
+    {
+      "category": "Customization",
+      "pages": [
+        {"title": "Configuration", "url": "/docs/configuration"},
+        {"title": "Content Configuration", "url": "/docs/content-configuration"},
+        {"title": "Theme Configuration", "url": "/docs/theme"},
+        {"title": "Screens", "url": "/docs/screens"},
+        {"title": "Colors", "url": "/docs/customizing-colors"},
+        {"title": "Spacing", "url": "/docs/customizing-spacing"},
+        {"title": "Plugins", "url": "/docs/plugins"},
+        {"title": "Presets", "url": "/docs/presets"}
+      ]
+    },
+    {
+      "category": "Layout",
+      "pages": [
+        {"title": "Aspect Ratio", "url": "/docs/aspect-ratio"},
+        {"title": "Container", "url": "/docs/container"},
+        {"title": "Columns", "url": "/docs/columns"},
+        {"title": "Break After", "url": "/docs/break-after"},
+        {"title": "Break Before", "url": "/docs/break-before"},
+        {"title": "Break Inside", "url": "/docs/break-inside"},
+        {"title": "Box Decoration Break", "url": "/docs/box-decoration-break"},
+        {"title": "Box Sizing", "url": "/docs/box-sizing"},
+        {"title": "Display", "url": "/docs/display"},
+        {"title": "Floats", "url": "/docs/float"},
+        {"title": "Clear", "url": "/docs/clear"},
+        {"title": "Isolation", "url": "/docs/isolation"},
+        {"title": "Object Fit", "url": "/docs/object-fit"},
+        {"title": "Object Position", "url": "/docs/object-position"},
+        {"title": "Overflow", "url": "/docs/overflow"},
+        {"title": "Overscroll Behavior", "url": "/docs/overscroll-behavior"},
+        {"title": "Position", "url": "/docs/position"},
+        {"title": "Top / Right / Bottom / Left", "url": "/docs/top-right-bottom-left"},
+        {"title": "Visibility", "url": "/docs/visibility"},
+        {"title": "Z-Index", "url": "/docs/z-index"}
+      ]
+    },
+    {
+      "category": "Flexbox & Grid",
+      "pages": [
+        {"title": "Flex Basis", "url": "/docs/flex-basis"},
+        {"title": "Flex Direction", "url": "/docs/flex-direction"},
+        {"title": "Flex Wrap", "url": "/docs/flex-wrap"},
+        {"title": "Flex", "url": "/docs/flex"},
+        {"title": "Flex Grow", "url": "/docs/flex-grow"},
+        {"title": "Flex Shrink", "url": "/docs/flex-shrink"},
+        {"title": "Order", "url": "/docs/order"},
+        {"title": "Grid Template Columns", "url": "/docs/grid-template-columns"},
+        {"title": "Grid Column Start / End", "url": "/docs/grid-column"},
+        {"title": "Grid Template Rows", "url": "/docs/grid-template-rows"},
+        {"title": "Grid Row Start / End", "url": "/docs/grid-row"},
+        {"title": "Grid Auto Flow", "url": "/docs/grid-auto-flow"},
+        {"title": "Grid Auto Columns", "url": "/docs/grid-auto-columns"},
+        {"title": "Grid Auto Rows", "url": "/docs/grid-auto-rows"},
+        {"title": "Gap", "url": "/docs/gap"},
+        {"title": "Justify Content", "url": "/docs/justify-content"},
+        {"title": "Justify Items", "url": "/docs/justify-items"},
+        {"title": "Justify Self", "url": "/docs/justify-self"},
+        {"title": "Align Content", "url": "/docs/align-content"},
+        {"title": "Align Items", "url": "/docs/align-items"},
+        {"title": "Align Self", "url": "/docs/align-self"},
+        {"title": "Place Content", "url": "/docs/place-content"},
+        {"title": "Place Items", "url": "/docs/place-items"},
+        {"title": "Place Self", "url": "/docs/place-self"}
+      ]
+    },
+    {
+      "category": "Spacing",
+      "pages": [
+        {"title": "Padding", "url": "/docs/padding"},
+        {"title": "Margin", "url": "/docs/margin"},
+        {"title": "Space Between", "url": "/docs/space"}
+      ]
+    },
+    {
+      "category": "Sizing",
+      "pages": [
+        {"title": "Width", "url": "/docs/width"},
+        {"title": "Min-Width", "url": "/docs/min-width"},
+        {"title": "Max-Width", "url": "/docs/max-width"},
+        {"title": "Height", "url": "/docs/height"},
+        {"title": "Min-Height", "url": "/docs/min-height"},
+        {"title": "Max-Height", "url": "/docs/max-height"},
+        {"title": "Size", "url": "/docs/size"}
+      ]
+    },
+    {
+      "category": "Typography",
+      "pages": [
+        {"title": "Font Family", "url": "/docs/font-family"},
+        {"title": "Font Size", "url": "/docs/font-size"},
+        {"title": "Font Smoothing", "url": "/docs/font-smoothing"},
+        {"title": "Font Style", "url": "/docs/font-style"},
+        {"title": "Font Weight", "url": "/docs/font-weight"},
+        {"title": "Font Variant Numeric", "url": "/docs/font-variant-numeric"},
+        {"title": "Letter Spacing", "url": "/docs/letter-spacing"},
+        {"title": "Line Clamp", "url": "/docs/line-clamp"},
+        {"title": "Line Height", "url": "/docs/line-height"},
+        {"title": "List Style Image", "url": "/docs/list-style-image"},
+        {"title": "List Style Position", "url": "/docs/list-style-position"},
+        {"title": "List Style Type", "url": "/docs/list-style-type"},
+        {"title": "Text Align", "url": "/docs/text-align"},
+        {"title": "Text Color", "url": "/docs/text-color"},
+        {"title": "Text Decoration", "url": "/docs/text-decoration"},
+        {"title": "Text Decoration Color", "url": "/docs/text-decoration-color"},
+        {"title": "Text Decoration Style", "url": "/docs/text-decoration-style"},
+        {"title": "Text Decoration Thickness", "url": "/docs/text-decoration-thickness"},
+        {"title": "Text Underline Offset", "url": "/docs/text-underline-offset"},
+        {"title": "Text Transform", "url": "/docs/text-transform"},
+        {"title": "Text Overflow", "url": "/docs/text-overflow"},
+        {"title": "Text Wrap", "url": "/docs/text-wrap"},
+        {"title": "Text Indent", "url": "/docs/text-indent"},
+        {"title": "Vertical Align", "url": "/docs/vertical-align"},
+        {"title": "Whitespace", "url": "/docs/whitespace"},
+        {"title": "Word Break", "url": "/docs/word-break"},
+        {"title": "Hyphens", "url": "/docs/hyphens"},
+        {"title": "Content", "url": "/docs/content"}
+      ]
+    },
+    {
+      "category": "Backgrounds",
+      "pages": [
+        {"title": "Background Attachment", "url": "/docs/background-attachment"},
+        {"title": "Background Clip", "url": "/docs/background-clip"},
+        {"title": "Background Color", "url": "/docs/background-color"},
+        {"title": "Background Origin", "url": "/docs/background-origin"},
+        {"title": "Background Position", "url": "/docs/background-position"},
+        {"title": "Background Repeat", "url": "/docs/background-repeat"},
+        {"title": "Background Size", "url": "/docs/background-size"},
+        {"title": "Background Image", "url": "/docs/background-image"},
+        {"title": "Gradient Color Stops", "url": "/docs/gradient-color-stops"}
+      ]
+    },
+    {
+      "category": "Borders",
+      "pages": [
+        {"title": "Border Radius", "url": "/docs/border-radius"},
+        {"title": "Border Width", "url": "/docs/border-width"},
+        {"title": "Border Color", "url": "/docs/border-color"},
+        {"title": "Border Style", "url": "/docs/border-style"},
+        {"title": "Divide Width", "url": "/docs/divide-width"},
+        {"title": "Divide Color", "url": "/docs/divide-color"},
+        {"title": "Divide Style", "url": "/docs/divide-style"},
+        {"title": "Outline Width", "url": "/docs/outline-width"},
+        {"title": "Outline Color", "url": "/docs/outline-color"},
+        {"title": "Outline Style", "url": "/docs/outline-style"},
+        {"title": "Outline Offset", "url": "/docs/outline-offset"},
+        {"title": "Ring Width", "url": "/docs/ring-width"},
+        {"title": "Ring Color", "url": "/docs/ring-color"},
+        {"title": "Ring Offset Width", "url": "/docs/ring-offset-width"},
+        {"title": "Ring Offset Color", "url": "/docs/ring-offset-color"}
+      ]
+    },
+    {
+      "category": "Effects",
+      "pages": [
+        {"title": "Box Shadow", "url": "/docs/box-shadow"},
+        {"title": "Box Shadow Color", "url": "/docs/box-shadow-color"},
+        {"title": "Opacity", "url": "/docs/opacity"},
+        {"title": "Mix Blend Mode", "url": "/docs/mix-blend-mode"},
+        {"title": "Background Blend Mode", "url": "/docs/background-blend-mode"}
+      ]
+    },
+    {
+      "category": "Filters",
+      "pages": [
+        {"title": "Blur", "url": "/docs/blur"},
+        {"title": "Brightness", "url": "/docs/brightness"},
+        {"title": "Contrast", "url": "/docs/contrast"},
+        {"title": "Drop Shadow", "url": "/docs/drop-shadow"},
+        {"title": "Grayscale", "url": "/docs/grayscale"},
+        {"title": "Hue Rotate", "url": "/docs/hue-rotate"},
+        {"title": "Invert", "url": "/docs/invert"},
+        {"title": "Saturate", "url": "/docs/saturate"},
+        {"title": "Sepia", "url": "/docs/sepia"},
+        {"title": "Backdrop Blur", "url": "/docs/backdrop-blur"},
+        {"title": "Backdrop Brightness", "url": "/docs/backdrop-brightness"},
+        {"title": "Backdrop Contrast", "url": "/docs/backdrop-contrast"},
+        {"title": "Backdrop Grayscale", "url": "/docs/backdrop-grayscale"},
+        {"title": "Backdrop Hue Rotate", "url": "/docs/backdrop-hue-rotate"},
+        {"title": "Backdrop Invert", "url": "/docs/backdrop-invert"},
+        {"title": "Backdrop Opacity", "url": "/docs/backdrop-opacity"},
+        {"title": "Backdrop Saturate", "url": "/docs/backdrop-saturate"},
+        {"title": "Backdrop Sepia", "url": "/docs/backdrop-sepia"}
+      ]
+    },
+    {
+      "category": "Transitions & Animation",
+      "pages": [
+        {"title": "Transition Property", "url": "/docs/transition-property"},
+        {"title": "Transition Duration", "url": "/docs/transition-duration"},
+        {"title": "Transition Timing Function", "url": "/docs/transition-timing-function"},
+        {"title": "Transition Delay", "url": "/docs/transition-delay"},
+        {"title": "Animation", "url": "/docs/animation"}
+      ]
+    },
+    {
+      "category": "Transforms",
+      "pages": [
+        {"title": "Scale", "url": "/docs/scale"},
+        {"title": "Rotate", "url": "/docs/rotate"},
+        {"title": "Translate", "url": "/docs/translate"},
+        {"title": "Skew", "url": "/docs/skew"},
+        {"title": "Transform Origin", "url": "/docs/transform-origin"}
+      ]
+    },
+    {
+      "category": "Interactivity",
+      "pages": [
+        {"title": "Accent Color", "url": "/docs/accent-color"},
+        {"title": "Appearance", "url": "/docs/appearance"},
+        {"title": "Cursor", "url": "/docs/cursor"},
+        {"title": "Caret Color", "url": "/docs/caret-color"},
+        {"title": "Pointer Events", "url": "/docs/pointer-events"},
+        {"title": "Resize", "url": "/docs/resize"},
+        {"title": "Scroll Behavior", "url": "/docs/scroll-behavior"},
+        {"title": "Scroll Margin", "url": "/docs/scroll-margin"},
+        {"title": "Scroll Padding", "url": "/docs/scroll-padding"},
+        {"title": "Scroll Snap Align", "url": "/docs/scroll-snap-align"},
+        {"title": "Scroll Snap Stop", "url": "/docs/scroll-snap-stop"},
+        {"title": "Scroll Snap Type", "url": "/docs/scroll-snap-type"},
+        {"title": "Touch Action", "url": "/docs/touch-action"},
+        {"title": "User Select", "url": "/docs/user-select"},
+        {"title": "Will Change", "url": "/docs/will-change"}
+      ]
+    },
+    {
+      "category": "SVG",
+      "pages": [
+        {"title": "Fill", "url": "/docs/fill"},
+        {"title": "Stroke", "url": "/docs/stroke"},
+        {"title": "Stroke Width", "url": "/docs/stroke-width"}
+      ]
+    },
+    {
+      "category": "Accessibility",
+      "pages": [
+        {"title": "Screen Readers", "url": "/docs/screen-readers"},
+        {"title": "Forced Color Adjust", "url": "/docs/forced-color-adjust"}
+      ]
+    }
+  ],
+  "scraping": {
+    "rate_limit_ms": 1000,
+    "max_retries": 3,
+    "timeout_ms": 30000,
+    "user_agent": "Mozilla/5.0 (compatible; DocsScraper/1.0)",
+    "selectors": {
+      "main_content": "main, article, .prose",
+      "code_blocks": "pre code, .code-block",
+      "headings": "h1, h2, h3, h4, h5, h6",
+      "examples": ".example, .demo"
+    }
+  },
+  "output": {
+    "format": "markdown",
+    "include_metadata": true,
+    "preserve_code_blocks": true,
+    "create_index": true
+  }
+}
